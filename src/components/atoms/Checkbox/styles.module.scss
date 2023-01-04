@@ -1,0 +1,11 @@
+.checkbox {
+  align-items: center;
+
+  :global(.ant-checkbox-input) {
+    margin: 0px;
+  }
+  :global(.ant-checkbox-inner) {
+    width: 20px;
+    height: 20px;
+  }
+}

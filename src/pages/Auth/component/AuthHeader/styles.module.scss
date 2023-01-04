@@ -1,0 +1,13 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/breakpoints.scss";
+
+.logowrapper {
+  display: none;
+  @include responsive("lgDown") {
+    background-color: $blue200;
+    padding: 1.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

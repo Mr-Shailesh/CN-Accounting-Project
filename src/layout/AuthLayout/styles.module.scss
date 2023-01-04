@@ -1,0 +1,34 @@
+@import "../../styles/colors.scss";
+
+.layout{
+  height: 100%;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  height: auto;
+  box-sizing: border-box;
+  background-color: $white;
+
+  .leftSection {
+    padding: 32.5px;
+    display: grid;
+    grid-template-rows: 2fr;
+    .footerList {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0px;
+      padding: 0px;
+      .footerItem {
+        padding: 0px 17px;
+        color: $primary-color;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import "../../../styles/colors.scss";
+.sidebarWrapper {
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark:not(.ant-menu-horizontal)
+      .ant-menu-item-selected) {
+    background-color: rgba($color: #3083f8, $alpha: 1);
+    border-radius: 0;
+    border-right: 3px solid $white;
+  }
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark
+      .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)) {
+    background-color: rgba($color: $white, $alpha: 0.5);
+  }
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-light:not(.ant-menu-horizontal)
+      .ant-menu-item-selected) {
+    background-color: $sidebar-select-color;
+    border-radius: 0;
+    border-right: 3px solid
+      rgba($color: $sidebar-select-border-color, $alpha: 0.5);
+  }
+  :global(.ant-layout-sider .ant-layout-sider-dark) {
+    top: 64px;
+    position: sticky;
+  }
+}
+.collapseSidebarWrapper {
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark:not(.ant-menu-horizontal)
+      .ant-menu-item-selected) {
+    background-color: rgba($color: $sidebar-select-color2, $alpha: 1);
+    border-radius: 0;
+  }
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark
+      .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)) {
+    background-color: rgba($color: $white, $alpha: 0.5);
+  }
+  :global(.css-dev-only-do-not-override-acm2ia.ant-menu-light:not(.ant-menu-horizontal)
+      .ant-menu-item-selected) {
+    background-color: $sidebar-select-color;
+    border-radius: 0;
+  }
+}

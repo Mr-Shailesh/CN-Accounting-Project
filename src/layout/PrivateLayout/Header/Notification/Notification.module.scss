@@ -1,0 +1,32 @@
+@import "./src/styles/colors";
+
+.mainContainer {
+  min-width: 300px !important;
+  .userProfile {
+    display: flex;
+    align-items: center;
+    padding-right: 40px;
+    .userInfo {
+      display: flex;
+      flex-flow: column;
+      .userTitle {
+        height: 20px;
+      }
+    }
+  }
+  .modelWrapper {
+    display: flex;
+    justify-content: flex-start;
+    padding: 5px;
+    align-items: center;
+  }
+  .userImg {
+    width: 40px;
+    height: 40px;
+    background-color: $blue200;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,70 @@
+@import "./src/styles/colors";
+.buttonWrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .sunWrapper {
+    width: 15px;
+    height: 15px;
+    background: $white;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid rgb(0, 21, 41);
+    &:after {
+      content: "";
+      width: 18px;
+      height: 18px;
+      background: $white;
+      border-radius: 50%;
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      transition: 0.5s;
+    }
+    div {
+      height: 3px;
+      position: absolute;
+      background: $white;
+      top: 50%;
+      left: 50%;
+      transition: width 0.5s;
+      z-index: -1;
+    }
+    .line1 {
+      width: 30px;
+      transform: translate(-50%, -50%);
+    }
+    .line2 {
+      width: 30px;
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .line3 {
+      width: 27px;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .line4 {
+      width: 27px;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  .night::after {
+    top: -8px;
+    right: -8px;
+  }
+  .sunWrapper.night div {
+    width: 0;
+  }
+  .night {
+    background: black;
+  }
+}

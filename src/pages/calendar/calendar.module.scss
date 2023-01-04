@@ -1,0 +1,80 @@
+@import "../../styles/colors.scss";
+@import "../../styles/breakpoints.module.scss";
+.loadingFullPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.main {
+  background-color: $bg-color;
+  
+
+
+  .header {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      margin-right: 10px;
+    }
+   
+  }
+
+  .layout {
+    padding: 15px;
+
+    :global(.css-dev-only-do-not-override-acm2ia.ant-card .ant-card-body){
+      @include responsive("xlUp") {
+        padding:0;
+      }
+    }
+
+    .cardHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include responsive("xlUp"){
+        margin: 6px 12px;
+      }
+    }
+
+    .cardBody {
+      display: flex;
+      align-items: center;
+      @include responsive("xlUp") {
+        flex-direction: column-reverse;
+      }
+      .cardBody_left {
+        width: 60%;
+        border-radius: 9px;
+        border: 0.5px solid $cal-cardBody-border;
+        .expenditureTag {
+          background-color: $light-red;
+          color: $dark-red;
+          border: none;
+        }
+        .incomeTag {
+          background-color: $light-green;
+          color: $dark-green;
+          border: none;
+        }
+        @include responsive("xlUp") {
+          width: 100%;
+          overflow: auto;
+        }
+      }
+      .cardBody_right {
+        width: 40%;
+        display: flex;
+        justify-content: center;
+        @include responsive("xlUp") {
+          width: 100%;
+          margin: 20px 0;
+        }
+      }
+    }
+  }
+}

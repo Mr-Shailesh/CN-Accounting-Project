@@ -1,0 +1,28 @@
+@import "../../../styles/colors.scss";
+
+.content {
+  margin: 20px;
+  text-align: center;
+}
+
+:global(.ant-modal) {
+  :global(.anticon-close) {
+    display: none;
+  }
+  :global(.ant-modal-footer) {
+    text-align: right;
+  }
+  :global(.ant-btn-primary) {
+    background-color: $primary-color;
+    :hover {
+      background-color: $secondary-color;
+    }
+    :active {
+      background-color: $secondary-color;
+    }
+  }
+
+  :global(.ant-btn-default) {
+    display: none;
+  }
+}

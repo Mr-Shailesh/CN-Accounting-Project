@@ -1,0 +1,22 @@
+@import "./colors.scss";
+@import "./font.scss";
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: greyscale;
+  overflow: auto !important;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#root {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.App {
+  height: 100%;
+  box-sizing: border-box;
+}

@@ -1,0 +1,85 @@
+@import "../../styles/breakpoints.module.scss";
+@import "./src/styles/colors";
+body {
+  :global(.css-dev-only-do-not-override-acm2ia.ant-drawer .ant-drawer-body) {
+    padding: 0 !important;
+    :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark:not(.ant-menu-horizontal)
+        .ant-menu-item-selected) {
+      background-color: rgba($color: $sidebar-select-color2, $alpha: 1);
+      border-radius: 0;
+      border-right: 3px solid $white;
+    }
+    :global(.css-dev-only-do-not-override-acm2ia.ant-menu-dark
+        .ant-menu-item:hover:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)) {
+      background-color: rgba($color: $white, $alpha: 0.5);
+    }
+    :global(:where(.css-dev-only-do-not-override-acm2ia).ant-menu-light:not(.ant-menu-horizontal)
+        .ant-menu-item-selected) {
+      background-color: $sidebar-select-color;
+      border-radius: 0;
+      border-right: 3px solid
+        rgba($color: $sidebar-select-border-color, $alpha: 0.5);
+    }
+  }
+}
+.loadingFullPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+.layoutContainer {
+  display: flex;
+  flex-direction: column;
+  .containerWrapper {
+    display: flex;
+    :global(.css-dev-only-do-not-override-acm2ia.ant-layout .ant-layout-sider) {
+      height: calc(100vh - 64px);
+      min-width: 240px !important;
+      box-shadow: 0 1px 4px -1px rgb(0 0 0 / 15%);
+      z-index: 999;
+      overflow: auto;
+      background: $white;
+      position: sticky;
+      top: 64px;
+      @include responsive("lgDown") {
+        min-width: 340px !important;
+      }
+    }
+    ::-webkit-scrollbar {
+      width: 5px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: $sidebar-scroll-color;
+      border-radius: 50px;
+    }
+
+    .contentWrapper {
+      height: calc(100vh - 64px);
+      overflow: auto;
+    }
+  }
+  .collapseContainerWrapper {
+    display: flex;
+    :global(.css-dev-only-do-not-override-acm2ia.ant-layout .ant-layout-sider) {
+      min-width: 80px !important;
+      height: calc(100vh - 64px);
+      @include responsive("lgDown") {
+        display: none;
+      }
+    }
+    .contentWrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
+  :global(.ant-layout-header) {
+    top: 0;
+    position: sticky;
+    z-index: 999;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  }
+}

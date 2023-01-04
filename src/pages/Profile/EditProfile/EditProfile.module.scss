@@ -1,0 +1,128 @@
+@import "../../../styles/breakpoints.module";
+@import "../../../styles/colors.scss";
+
+.editUserDetailWrapper {
+  background: $white;
+  border-radius: 10px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  :global(.ant-form-item-row) {
+    justify-content: center;
+  }
+
+  :global(.ant-col) {
+    margin-left: 1px;
+    max-width: 100% !important;
+  }
+
+  :global(.ant-form-item-control-wrapper) {
+    width: 100%;
+  }
+
+  :global(.ant-form) {
+    width: 100%;
+  }
+  @include responsive("lgDown") {
+    width: 95%;
+    margin: 20px 0;
+  }
+  .headingWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .mainDetailWrapper {
+    display: flex;
+    flex-direction: column;
+    .infoWrapper {
+      display: flex;
+      margin: 10px 0;
+      font-size: 15px;
+      @include responsive("mdDown") {
+        flex-direction: column;
+      }
+
+      .titleWrapper {
+        font-weight: 600;
+        color: $gray;
+        width: 30%;
+      }
+      .valueWrapper {
+        width: 60%;
+        @include responsive("mdDown") {
+          width: 100%;
+          }
+      }
+      .nameWrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
+        width: 60%;
+        @include responsive("mdDown") {
+        width: 100%;
+        }
+        
+      }
+      .useGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+      }
+      
+      .inputBox {
+        width: 100%;
+        padding: 10px 13px;
+        color: $black;
+        border: 1px solid $secondary-color2;
+        box-shadow: none;
+        background: transparent;
+      }
+      .inputBox:disabled{
+        opacity: 0.7;
+      }
+      .gender {
+        margin-bottom: 24px;
+        :global(.ant-select) {
+          width: 100%;
+          :global(.ant-select-selector) {
+            width: 100%;
+            height: 45px;
+            padding: 0 11px;
+            align-items: center;
+            background-color: transparent;
+            color: $black;
+            border: 1px solid $secondary-color2;
+            :global(.ant-select-selection-item) {
+              color: $black;
+            }
+          }
+        }
+      }
+
+      :global(.css-dev-only-do-not-override-acm2ia.ant-input) {
+        color: $black;
+      }
+
+      .datePicker {
+        margin-bottom: 24px;
+        :global(.ant-picker) {
+          background-color: transparent;
+          height: 45px;
+          width: 100%;
+          border: 1px solid $secondary-color2;
+          :global(.ant-picker-input) {
+            grid-template-columns: auto 20px;
+            input {
+              color: $black;
+            }
+          }
+        }
+      }
+    }
+  }
+}

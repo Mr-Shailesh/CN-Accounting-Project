@@ -1,0 +1,16 @@
+@import '../../../styles/colors.scss';
+.password{
+
+  .formItem{
+    margin-bottom: 12px;
+  }
+  :global(#basic_password){
+    background-color: transparent;
+    color: $gray4;
+   }
+  
+   input[name$='password']{
+    background-color: transparent;
+   }
+
+}

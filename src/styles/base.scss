@@ -1,0 +1,65 @@
+@import "./colors.scss";
+
+
+$positions: ("top", "left", "bottom", "right");
+
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@mixin margin($size, $position) {
+  .m#{str-slice($position, 0, 1)}-#{$size} {
+    margin-#{$position}: $size + px;
+  }
+  .m-#{$size} {
+    margin: $size + px;
+  }
+  .mx-#{$size} {
+    margin: 0 $size + px;
+  }
+  .my-#{$size} {
+    margin: $size + px 0;
+  }
+}
+
+@mixin padding($size, $position) {
+  .p#{str-slice($position, 0, 1)}-#{$size} {
+    padding-#{$position}: $size + px !important;
+  }
+  .p-#{$size} {
+    padding: $size + px;
+  }
+  .px-#{$size} {
+    padding: 0 $size + px;
+  }
+  .py-#{$size} {
+    padding: $size + px 0;
+  }
+}
+
+@mixin position($value) {
+  position: $value;
+}
+
+@each $val in $positions {
+  .#{$val} {
+    @include position($val);
+  }
+}
+
+@each $position in $positions {
+  @for $i from 0 through 100 {
+    @include margin($i, $position);
+    @include padding($i, $position);
+  }
+}
+
+.c-gray {
+  color: #72849a;
+}
+.d-flex{
+  display: flex;
+}
+

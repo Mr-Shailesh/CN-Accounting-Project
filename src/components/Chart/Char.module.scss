@@ -1,0 +1,12 @@
+@import '../../styles/breakpoints.module.scss';
+
+.donutChart{
+   width: 570px;
+   
+   @include responsive('smDown'){
+       width: 500px;
+    }
+    @include responsive('xsDown'){
+        width: 400px;
+     }
+}

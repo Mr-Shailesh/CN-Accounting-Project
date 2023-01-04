@@ -1,0 +1,41 @@
+@import "../../../styles/breakpoints.module.scss";
+@import "../../../styles/colors.scss";
+
+.userDetailWrapper {
+  background: $white;
+  border-radius: 10px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  @include responsive("lgDown") {
+    width: 95%;
+    margin: 20px 0;
+  }
+  .headingWrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .mainDetailWrapper {
+    display: flex;
+    flex-direction: column;
+    .infoWrapper {
+      display: flex;
+      margin: 10px 0;
+      font-size: 15px;
+      @include responsive("mdDown") {
+        flex-direction: column;
+      }
+
+      .titleWrapper {
+        font-weight: 600;
+        color: $gray;
+        width: 30%;
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+@import "../../styles/colors.scss";
+
+.header {
+  padding: 5px 0px 0px 15px;
+  display: flex;
+  align-items: center;
+}
+
+.header h1 {
+  margin-right: 1rem;
+}
+
+.layout {
+  padding: 15px;
+}
+
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cardBody {
+  display: flex;
+  gap: 10px;
+}
+
+.cardBody_left {
+  width: 60%;
+}
+
+.cardBody_right {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.rightCard {
+  width: 45%;
+}
+
+.rightCard_inner {
+  text-align: center;
+}
+
+.loadingFullPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

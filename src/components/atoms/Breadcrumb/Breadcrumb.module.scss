@@ -1,0 +1,5 @@
+.breadcrumbFirst{
+    &::first-letter{
+        text-transform: capitalize;
+    }
+}

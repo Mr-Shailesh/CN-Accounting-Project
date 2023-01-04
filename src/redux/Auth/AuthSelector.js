@@ -1,0 +1,9 @@
+export const logoutSuccessSelector = ({ auth }) => auth.logout.success;
+export const userLoadingSelector = ({ auth }) => auth.user.loading;
+export const userDataSelector = ({ auth }) => auth.user.data;
+export const contactLoadingSelector = ({ auth }) => auth.contactUs.loading;
+export const contactSuccessSelector = ({ auth }) => auth.contactUs.success;
+export const loginLoadingSelector = ({ auth }) => auth.login.loading;
+export const signupLoadingSelector = ({ auth }) => auth.signup.loading;
+export const editLoadingSelector = ({ auth }) => auth.editUser.loading;
+export const editSuccessSelector = ({ auth }) => auth.editUser.success;

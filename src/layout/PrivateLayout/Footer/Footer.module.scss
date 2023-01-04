@@ -1,0 +1,18 @@
+@import "src/styles/colors";
+
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  .lineWrapper {
+    hr {
+      border-top: 1px solid $hr-color;
+    }
+  }
+
+  .footerDetailWrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

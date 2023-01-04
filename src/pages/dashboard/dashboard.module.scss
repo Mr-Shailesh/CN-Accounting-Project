@@ -1,0 +1,155 @@
+@import "../../styles/colors.scss";
+
+.dashboard {
+  padding: 10px;
+  height: calc(100vh - 64px);
+  .upperLayer {
+    display: flex;
+  }
+  &CardWrapper {
+    margin-bottom: 40px;
+    height: 520px;
+  }
+  &MiddleSection {
+    box-sizing: border-box;
+  }
+  .gradientChart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 18px;
+    font-weight: 700;
+    .title {
+      z-index: 99;
+      top: -10px;
+      padding: 10px 1px 20px 1px;
+    }
+    .subText {
+      font-size: 20px;
+      text-align: center;
+      font-weight: 100;
+      color: $gray;
+      padding: 20px 1px 20px 1px;
+    }
+    .learnBtn {
+      padding: 20px 1px 80px 1px;
+    }
+  }
+  .upArrow {
+    color: $dark-green;
+    padding: 1px 1px 1px 10px;
+  }
+  .downArrow {
+    color: $red;
+    padding: 1px 1px 1px 10px;
+  }
+  .save {
+    color: $blue;
+    padding: 1px 1px 1px 10px;
+  }
+}
+
+.commonExpenditure {
+  .ant-card-head-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  &Main {
+    margin: 0px;
+  }
+  &Title {
+    font-size: 17px;
+    font-weight: 700;
+  }
+  &Body {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  &Content {
+    font-size: 30px;
+    font-weight: 700;
+    margin-left: 10px;
+  }
+  &StatementNegative {
+    font-size: 17px;
+    margin-left: 10px;
+    color: $dark-red;
+  }
+  &StatementPositive {
+    font-size: 17px;
+    margin-left: 10px;
+    color: $dark-green;
+  }
+  &Footer {
+    color: $gray;
+    margin-top: 10px;
+  }
+}
+.rowClass {
+  background-color: $white;
+  border-bottom: 1px solid $bg-color !important;
+  font-size: 14px;
+  height: 25px;
+  font-weight: 400;
+}
+.expenditureTag {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: $light-red;
+  color: $dark-red;
+  border: none;
+  font-size: 16px;
+  padding: 3px;
+}
+.incomeTag {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  background-color: $light-green;
+  color: $dark-green;
+  border: none;
+  font-size: 16px;
+  padding: 3px;
+}
+.cardHeight {
+  height: 580px;
+}
+.titleTypes {
+  height: 20px;
+  .expenses {
+    &Title {
+      float: left;
+      font-size: 19px;
+      font-weight: 700;
+    }
+    &Menu {
+      float: right;
+    }
+  }
+}
+
+.listTypes {
+  box-sizing: border-box;
+  min-width: 100%;
+  display: flex;
+  border: 1px solid $bg-color;
+  border-radius: 10px;
+  margin: 10px 5px;
+  padding: 10px;
+  justify-content: space-between;
+  min-height: 25px;
+  .typesDetail {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    height: 20px;
+  }
+  .amount {
+    font-size: 15px;
+    font-weight: 500;
+    height: 20px;
+  }
+}

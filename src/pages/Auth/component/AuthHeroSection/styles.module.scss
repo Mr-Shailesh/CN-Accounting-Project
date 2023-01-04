@@ -1,0 +1,49 @@
+@import "../../../../styles/colors.scss";
+@import "../../../../styles/breakpoints.scss";
+
+.wrapper {
+  background-color: $blue200;
+
+  height: 100vh;
+  display: flex;
+  flex: 1 auto;
+  min-width: 0;
+  padding: 3.75rem;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include responsive("lgDown") {
+    display: none;
+  }
+
+  .imagewrapper {
+    margin-top: 2rem;
+    img {
+      display: block;
+      width: 275px;
+    }
+  }
+
+  .logowrapper {
+    margin-top: 7rem;
+  }
+  .title {
+    color: $white;
+    font-size: calc(1.35rem + 1.2vw);
+    font-weight: 700;
+    text-align: center;
+  }
+  .textwrapper {
+    margin-top: 3rem;
+  }
+  .paragraphwrapper {
+    text-align: center;
+    span {
+      color: $white;
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+}

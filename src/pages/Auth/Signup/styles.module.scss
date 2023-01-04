@@ -1,0 +1,26 @@
+@import "../../../styles/colors.scss";
+@import "../../../styles/breakpoints.scss";
+.container {
+  min-width: 0;
+
+  height: fit-content;
+
+ 
+  .section {
+    padding: 32.5px;
+    width: 500px;
+    margin: 0px auto;
+    @include responsive("smDown") {
+      width: 100%;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 0px;
+      margin-bottom: 35px;
+      text-align: center;
+    }
+  }
+  
+
+  
+}

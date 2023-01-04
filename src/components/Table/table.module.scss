@@ -1,0 +1,15 @@
+@import "../../styles/colors.scss";
+
+.btn {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.deleteBtn {
+  background-color: $light-red;
+  color: $dark-red;
+}
+.editBtn {
+  background-color: $light-blue;
+  color: $blue;
+}

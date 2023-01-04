@@ -1,0 +1,91 @@
+$breakpoint-320: 320px;
+$breakpoint-480: 480px;
+$breakpoint-481: 481px;
+$breakpoint-576: 576px;
+$breakpoint-577: 577px;
+$breakpoint-768: 768px;
+$breakpoint-769: 769px;
+$breakpoint-992: 992px;
+$breakpoint-993: 993px;
+$breakpoint-1200: 1200px;
+$breakpoint-1400: 1400px;
+$breakpoint-1600: 1920px;
+// media queries
+@mixin responsive($keys...) {
+  @each $key in $keys {
+    @if $key == xs {
+      /* 320px — 480px: Mobile devices */
+      @media only screen and (min-width: $breakpoint-320) and (max-width: $breakpoint-480) {
+        @content;
+      }
+    }
+    @if $key == xsDown {
+      /* 0px — 480px: Mobile devices */
+      @media only screen and (max-width: $breakpoint-480) {
+        @content;
+      }
+    }
+    @if $key == sm {
+      // 481px-576px
+      @media only screen and (min-width: $breakpoint-481) and (max-width: $breakpoint-576) {
+        @content;
+      }
+    }
+    @if $key == smDown {
+      // 0px-576px
+      @media only screen and (max-width: $breakpoint-576) {
+        @content;
+      }
+    }
+    @if $key == md {
+      // 577px-768px
+      @media only screen and (min-width: $breakpoint-577) and (max-width: $breakpoint-768) {
+        @content;
+      }
+    }
+    @if $key == mdUp {
+      // 0px-768px
+      @media only screen and (min-width: $breakpoint-768) {
+        @content;
+      }
+    }
+    @if $key == mdDown {
+     
+      @media only screen and (max-width: $breakpoint-768) {
+        @content;
+      }
+    }
+    @if $key == lg {
+      // 769px-992px
+      @media only screen and (min-width: $breakpoint-769) and (max-width: $breakpoint-992) {
+        @content;
+      }
+    }
+    @if $key == lgDown {
+      // 0px-992px
+      @media only screen and (max-width: $breakpoint-992) {
+        @content;
+      }
+    } 
+    @if $key == xl {
+      @media only screen and (min-width: $breakpoint-1200) {
+        @content;
+      }
+    }
+    @if $key == xlDown {
+      @media only screen and (max-width: $breakpoint-1200) {
+        @content;
+      }
+    }
+    @if $key == xlUp {
+      @media only screen and (max-width: $breakpoint-1400) {
+        @content;
+      }
+    }
+    @if $key == xxl {
+      @media only screen and (min-width: $breakpoint-1600) {
+        @content;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import '../../../../styles/breakpoints.module.scss';
+@import "./src/styles/colors";
+.mainContainer {
+  min-width: 300px !important;
+}
+.userProfile {
+  display: flex;
+  align-items: center;
+  padding-right: 40px;
+  cursor: pointer;
+  .userImg {
+    width: 40px;
+    height: 40px;
+    background-color: $blue200;
+    border-radius: 50%;
+    align-items: center;
+    margin-right: 10px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+  }
+  .userInfo {
+    display: flex;
+    flex-flow: column;
+    @include responsive('smDown'){
+      display:none;
+    }
+
+    .userTitle {
+      height: 20px;
+    }
+  }
+}
+.modelWrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 5px;
+  align-items: center;
+}

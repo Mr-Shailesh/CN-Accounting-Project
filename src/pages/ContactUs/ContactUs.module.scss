@@ -1,0 +1,107 @@
+@import "../../styles/breakpoints.module.scss";
+@import "../../styles/colors.scss";
+.contactUsWrapper {
+  min-height: calc(100vh - 154px);
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  .backgroundWrapper {
+    background: $blue200;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 63%, 0% 100%);
+    height: 500px;
+    width: 100%;
+  }
+  .modalWrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 45%;
+    min-height: 450px;
+    position: absolute;
+    top: 300px;
+    background-color: $white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    @include responsive("xlDown") {
+      margin: 0 150px;
+    }
+    @include responsive("lgDown") {
+    top: 220px;
+
+      width: 60%;
+      margin: 0 150px;
+      flex-direction: column;
+    }
+    @include responsive("smDown") {
+      width: 70%;
+      margin: 0 90px;
+    }
+    @include responsive("xsDown") {
+      margin-left: 80px;
+    }
+    .formWrapper {
+      display: flex;
+      justify-content: space-evenly;
+      flex-flow: column;
+      width: 70%;
+      height: 70%;
+      margin: 20px;
+      .inputBox {
+        width: 100%;
+      }
+      .messageBox {
+        height: 100px;
+      }
+      .btnSubmit {
+        margin-top: 10px;
+        color: #fff;
+        cursor: pointer;
+        border: 0;
+        width: 100%;
+        background: $blue200;
+      }
+    }
+    .detailWrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-flow: column;
+      height: 286px;
+      .contactUsSvgWrapper {
+        max-width: 350px;
+        .contactUsImage {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+      .contactUsDetail {
+        display: flex;
+        flex-flow: column;
+        font-size: 20px;
+        .contactDetailWrapper {
+          margin-bottom: 10px;
+          .contactIcon {
+            color: $blue200;
+            border-radius: 50%;
+            font-size: 17px;
+            padding: 3px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+        .mailDetailWrapper {
+          .contactIcon {
+            color: $blue200;
+            border-radius: 50%;
+            font-size: 17px;
+            padding: 3px;
+          }
+          span {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}
